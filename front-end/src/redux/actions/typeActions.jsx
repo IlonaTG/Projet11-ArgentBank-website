@@ -1,0 +1,8 @@
+//SIGN IN//
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+export const LOGOUT = "LOGOUT";
+
+//USER PROFILE//
+export const GET_USERPROFILE = "GET_USERPROFILE"
+export const UPDATE_USERNAME = "UPDATE_USERNAME"
