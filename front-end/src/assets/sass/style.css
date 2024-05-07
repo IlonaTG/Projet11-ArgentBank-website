@@ -77,9 +77,11 @@ html body .main .bg-dark {
 }
 
 .hero {
-  background-image: url("../img/bank-tree.png");
+  background-image: url("../img//bank-tree.webp");
   background-position: 0 -50px;
   background-size: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
   background-repeat: no-repeat;
   height: 300px;
   position: relative;
@@ -136,6 +138,10 @@ html body .main .bg-dark {
 .features {
   display: flex;
   flex-direction: column;
+}
+.features h2 {
+  font-size: 26px;
+  margin-left: 15px;
 }
 .features .feature-item {
   flex: 1;
