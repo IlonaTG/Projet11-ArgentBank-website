@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/authActions";
-import Logo from "../../assets/img/argentBankLogo.png";
+import Logo from "../../assets/img/argentBankLogo.webp";
 
 function Navbar(){
   const isConnected = useSelector((state) => state.auth.token);
