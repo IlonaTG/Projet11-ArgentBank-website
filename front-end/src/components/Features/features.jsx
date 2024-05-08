@@ -5,7 +5,6 @@ function Features() {
   const featuresData = FeaturesData;
   return (
     <section className="features">
-      <h2>Features</h2>
       {featuresData.map((feature, index) => (
         <div className="feature-item" key={index}>
           <img

@@ -22,28 +22,24 @@ function Navbar(){
       <h1 className="sr-only">Argent Bank</h1>
       <nav className="main-nav">
         <NavLink to="/" className="main-nav-logo">
-          <img src={Logo} alt="Argent Bank Logo"/>
+          <img className="main-nav-logo-image" src={Logo} alt="Argent Bank Logo"/>
         </NavLink>
         {isConnected ? (
           <div className="connected">
-            <NavLink to="/profile">
+            <NavLink className="main-nav-item" to="/profile">
+            <i className="fa fa-user-circle" />
             <p>{userName}</p>
-              <i className="fa-solid fa-2x fa-circle-user" />
             </NavLink>
-            <NavLink to="/">
-              <i className="fa-solid fa-2x fa-gear"></i>
-            </NavLink>
-            <NavLink to="/" onClick={HandleFaLogout}>
-              <i className="fa-solid fa-2x fa-power-off"></i>
+            <NavLink className="main-nav-item" to="/" onClick={HandleFaLogout}>
+              <i className="fa fa-sign-out"></i>
+              <p>Sign Out</p>
             </NavLink>
           </div>
         ) : (
           <div className="not-connected">
-            <NavLink to="/settings">
-              <i className="fa-solid fa-2x fa-gear"></i>
-            </NavLink>
-            <NavLink to="/login" >
-              <i className="fa-solid fa-2x fa-power-off"></i>
+            <NavLink className="main-nav-item" to="/login" >
+              <i className="fa fa-user-circle" aria-hidden="true"></i>
+              <p>Sign In</p>
             </NavLink>
           </div>
       )}

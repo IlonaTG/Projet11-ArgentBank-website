@@ -2,43 +2,66 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
-    margin-left: 8%;
+    padding: 5px 20px;
     .main-nav-logo {
         display: flex;
         align-items: center;
-        width: 35vw;
-        img{
-            width: 35vw;
+        .main-nav-logo-image{
+            width: 200px;
         }
     }
     .connected{
         display: flex;
         align-items: center;
-        .fa-solid{
-            color: #00bc77;
-            padding-right: 30px;
-            width: 2rem;
-          }
-        .active{
-            color: #00bc77;
-            text-decoration: none;
+        .main-nav-item{
             display: flex;
             flex-wrap: nowrap;
-            align-items: center;        }
-        p{
-            padding-right: 10px;
-            font-size: 17px;
-            
+            align-items: center;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 0.5rem;
+            text-decoration: none;
+            .fa-user-circle{
+                margin-right: 10px;
+            }
+            p{
+                margin-right: 10px;
+            }
+            p:hover{
+                text-decoration: underline;
+            }
+        .fa-sign-out{
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-size: inherit;
+            text-rendering: auto;
+            margin-right: 5px;
           }
+        
       }
+    }
       .not-connected{
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        .fa-solid{
-            color: #00bc77;
-            padding-right: 30px;
+        .main-nav-item{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 0.5rem;
+            text-decoration: none;
+            p:hover{
+                text-decoration: underline;
+            }
+        }
+        
+        .fa-user-circle{
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            font-size: inherit;
+            text-rendering: auto;
+            margin-right: 5px;
           }
       }
 }

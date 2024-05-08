@@ -51,7 +51,7 @@ function Profile () {
 
     return (
         <div className='profile-page'>
-            <main>
+            <main className='main bg-dark'>
                 {token ? (
                     <>
                         < User />

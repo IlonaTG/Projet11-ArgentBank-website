@@ -10,7 +10,7 @@ function Account ({ title, amount, amountDescription }) {
                 <p className='account-amount-description'>{amountDescription}</p>
             </div>
             <div className='account-content-wrapper cta'>
-                <i className="fa-sharp fa-solid fa-chevron-right"></i>
+            <button class="transaction-button">View transactions</button>
             </div>
         </section> 
     )

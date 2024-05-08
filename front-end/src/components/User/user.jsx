@@ -46,7 +46,7 @@ function User () {
         <h2>
         Welcome back,
         <br />
-        {userData.firstName} !
+        {userData.firstName} {userData.lastName} !
         </h2>
         <button className="edit-button" onClick={() => setDisplay(!display)}>
           Edit Name

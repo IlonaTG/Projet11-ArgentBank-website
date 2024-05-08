@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import { loginError, loginSuccess } from '../redux/actions/authActions.jsx';
+
 
 function SignIn(){
    const [email, setEmail] = useState('');
@@ -42,7 +43,7 @@ function SignIn(){
   }
 
    return(
-      <main className="bg-dark">
+      <main className="main bg-dark">
          <section className="sign-in-content">
             <i className="fa fa-user-circle sign-in-icon"></i>
             <h1>Sign In</h1>

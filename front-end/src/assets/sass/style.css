@@ -1,20 +1,20 @@
 html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 html body {
   margin: 0;
+}
+html body #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-html body .main {
+html body #root .main {
   flex: 1;
 }
-html body .main .sr-only {
+html body #root .main .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
   -webkit-clip-path: inset(50%) !important;
@@ -27,7 +27,7 @@ html body .main .sr-only {
   width: 1px !important;
   white-space: nowrap !important; /* 3 */
 }
-html body .main .bg-dark {
+html body #root .main .bg-dark {
   background-color: #12002b;
 }
 
@@ -35,45 +35,64 @@ html body .main .bg-dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
-  margin-left: 8%;
+  padding: 5px 20px;
 }
 .main-nav .main-nav-logo {
   display: flex;
   align-items: center;
-  width: 35vw;
 }
-.main-nav .main-nav-logo img {
-  width: 35vw;
+.main-nav .main-nav-logo .main-nav-logo-image {
+  width: 200px;
 }
 .main-nav .connected {
   display: flex;
   align-items: center;
 }
-.main-nav .connected .fa-solid {
-  color: #00bc77;
-  padding-right: 30px;
-  width: 2rem;
-}
-.main-nav .connected .active {
-  color: #00bc77;
+.main-nav .connected .main-nav-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 0.5rem;
   text-decoration: none;
+}
+.main-nav .connected .main-nav-item .fa-user-circle {
+  margin-right: 10px;
+}
+.main-nav .connected .main-nav-item p {
+  margin-right: 10px;
+}
+.main-nav .connected .main-nav-item p:hover {
+  text-decoration: underline;
+}
+.main-nav .connected .main-nav-item .fa-sign-out {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-size: inherit;
+  text-rendering: auto;
+  margin-right: 5px;
+}
+.main-nav .not-connected .main-nav-item {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 0.5rem;
+  text-decoration: none;
 }
-.main-nav .connected p {
-  padding-right: 10px;
-  font-size: 17px;
+.main-nav .not-connected .main-nav-item p:hover {
+  text-decoration: underline;
 }
-.main-nav .not-connected {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.main-nav .not-connected .fa-solid {
-  color: #00bc77;
-  padding-right: 30px;
+.main-nav .not-connected .fa-user-circle {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-size: inherit;
+  text-rendering: auto;
+  margin-right: 5px;
 }
 
 .hero {
@@ -139,10 +158,6 @@ html body .main .bg-dark {
   display: flex;
   flex-direction: column;
 }
-.features h2 {
-  font-size: 26px;
-  margin-left: 15px;
-}
 .features .feature-item {
   flex: 1;
   padding: 2.5rem;
@@ -168,16 +183,20 @@ html body .main .bg-dark {
 }
 .bg-dark {
   background-color: #12002b;
+  padding-top: 1px;
+  padding-bottom: 15vh;
 }
 .bg-dark .sign-in-content {
   box-sizing: border-box;
   background-color: white;
   width: 300px;
-  margin: 3rem auto 3rem auto;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 3rem;
   padding: 2rem;
 }
 .bg-dark .sign-in-content .sign-in-icon {
-  font-size: 5rem;
+  font-size: 14px;
 }
 .bg-dark .sign-in-content .input-wrapper {
   display: flex;
@@ -205,16 +224,19 @@ html body .main .bg-dark {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
   background-color: #00bc77;
   color: #fff;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  cursor: pointer;
+  border: none;
 }
 .bg-dark .sign-in-content .error-message {
   color: red;
 }
 
 .header {
-  color: black;
+  color: white;
   margin-bottom: 2rem;
 }
 .header h2 {
@@ -225,7 +247,7 @@ html body .main .bg-dark {
   border-color: #00bc77;
   color: #fff;
   font-weight: bold;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   padding: 0.625rem;
 }
 .header .edit-input {
@@ -262,8 +284,7 @@ html body .main .bg-dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
-  background-color: #424242;
+  background-color: white;
   width: 80%;
   margin: 0 auto;
   flex-direction: row;
@@ -271,7 +292,7 @@ html body .main .bg-dark {
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #2c3e50;
 }
 @media (max-width: 720px) {
   .account {
@@ -284,26 +305,37 @@ html body .main .bg-dark {
   flex-direction: column;
 }
 .account .account-content-wrapper .account-title {
+  margin: 0;
+  padding: 0;
   font-size: 1rem;
-  flex: 1;
+  font-weight: normal;
 }
 .account .account-content-wrapper .account-amount {
+  margin: 0;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 5px 0 5px 0;
 }
 .account .account-content-wrapper .account-amount-description {
   margin: 0;
+}
+.account .cta {
+  flex: 0;
 }
 @media (max-width: 720px) {
   .account .cta {
     width: 100%;
   }
 }
-.account .cta .fa-chevron-right {
-  font-size: 4rem;
-  display: flex;
-  justify-content: flex-end;
+.account .cta .transaction-button {
+  display: block;
+  width: 200px;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
 }
 
 .error-section {
